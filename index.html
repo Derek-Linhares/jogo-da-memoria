@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Jogo Da Memória</title>
+	<link rel="stylesheet" href="./assets/style/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<h1>Memory Game</h1>
+	<div class="buttons">
+		<button class="play" onclick="play()">
+			PLAY🎵
+		</button>
+		<button class="stop" onclick="stop()">
+			STOP⏹️
+		</button>
+	</div>
+	<div id="gameBoard"></div>
+
+	<div id="gameOver">
+
+		<div>Congratulations! You've mastered the memory game! Enjoy a Flaming Moe on us!
+
+		</div>
+		<div id="flaming"></div>
+		<button id="restart" onclick="restart()">
+			Play Again
+		</button>
+	</div>
+
+	<audio src="./assets//flaming.mp3" id="end"></audio>
+	<audio src="./assets/_The Simpsons_ Main Title Theme (320).mp3" id="bgm"></audio>
+	<audio src="/assets/doh! (sound effect).mp3" id="doh"></audio>
+	<audio src="/assets/uhuu.mp3" id="uhu"></audio>
+</body>
+<script src="./assets/script/game.js"></script>
+<script src="./assets/script/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+
+</html>
