@@ -79,7 +79,7 @@ function flipCard() {
           gameOverLayer.style.display = "flex";
           let musica = document.querySelector("#end");
           musica.play();
-          musica.loop = true;
+          playingTheme = false;
         }
       } else {
         setTimeout(() => {

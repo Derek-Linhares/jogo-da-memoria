@@ -126,3 +126,7 @@ function toggleMusic() {
     playingTheme = true;
   }
 }
+
+music.addEventListener("pause", () => {
+  playingTheme = false;
+});
