@@ -69,7 +69,7 @@ function flipCard() {
               angle: 90,
               spread: 360,
               startVelocity: 30,
-              origin: { x: Math.random(), y: 2 },
+              origin: { x: Math.random(), y: Math.random() },
               gravity: 0.5,
               ticks: 200,
             });
