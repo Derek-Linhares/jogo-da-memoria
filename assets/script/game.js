@@ -1,3 +1,5 @@
+let playingTheme = false;
+
 let game = {
   lockMode: false,
   firstCard: null,
@@ -112,11 +114,13 @@ function playSound(audio) {
   audio.volume = 0.3;
 }
 
-function play() {
-  playSound(music);
-}
-
-function stop() {
-  music.pause();
-  audio.currentTime = 0;
+function toggleMusic() {
+  if (playingTheme) {
+    music.pause();
+    music.currentTime = 0;
+    playingTheme = false;
+  } else {
+    playSound(music);
+    playingTheme = true;
+  }
 }

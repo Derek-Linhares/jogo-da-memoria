@@ -13,16 +13,18 @@
 </head>
 
 <body>
-	<h1>Memory Game</h1>
-	<div class="buttons">
-		<button class="play" onclick="play()">
-			PLAY🎵
-		</button>
-		<button class="stop" onclick="stop()">
-			STOP⏹️
-		</button>
+
+	</h1>
+	<div class="container">
+		<div id="logo"></div>
+		<h1>
+			Memory Game <div class="play" onclick="toggleMusic()">
+				🎵
+			</div>
+		</h1>
+		<div id="gameBoard"></div>
 	</div>
-	<div id="gameBoard"></div>
+
 
 	<div id="gameOver">
 
@@ -35,8 +37,8 @@
 		</button>
 	</div>
 
-	<audio src="./assets//flaming.mp3" id="end"></audio>
-	<audio src="./assets/_The Simpsons_ Main Title Theme (320).mp3" id="bgm"></audio>
+	<audio src="./assets//flaming.mp3" id="end" loop></audio>
+	<audio src="./assets/_The Simpsons_ Main Title Theme (320).mp3" id="bgm" loop></audio>
 	<audio src="/assets/doh! (sound effect).mp3" id="doh"></audio>
 	<audio src="/assets/uhuu.mp3" id="uhu"></audio>
 </body>
