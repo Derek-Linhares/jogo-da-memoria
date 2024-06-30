@@ -170,12 +170,23 @@ h1 {
 
 @media (max-width: 1024px) {
   html {
-    font-size: 5px;
+    font-size: 5.6px;
   }
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 5px;
+    font-size: 5.3px;
+  }
+  #flaming {
+    width: 65rem;
+    height: 65rem;
+    margin-bottom: -1rem;
+  }
+  body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    touch-action: none;
+    margin-top: 20rem;
   }
 }
