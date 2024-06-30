@@ -120,6 +120,8 @@ function toggleMusic() {
     music.currentTime = 0;
     playingTheme = false;
   } else {
+    let musicNote = document.getElementById("play");
+    musicNote.classList.add("stop-animation");
     playSound(music);
     playingTheme = true;
   }
