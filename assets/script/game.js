@@ -103,8 +103,6 @@ let game = {
   },
 };
 
-//musicas*/
-
 let music = document.querySelector("#bgm");
 
 function playSound(audio) {
@@ -130,3 +128,25 @@ function toggleMusic() {
 music.addEventListener("pause", () => {
   playingTheme = false;
 });
+
+function flipAllCards() {
+  var elms = document.getElementsByClassName("card");
+  var elementos = {};
+
+  for (let i = 0; i < elms.length; i++) {
+    var attr = elms[i].getAttribute("data-icon");
+    if (elementos[attr]) {
+      elementos[attr].push(elms[i]);
+    } else {
+      elementos[attr] = [elms[i]];
+    }
+  }
+
+  for (let attr in elementos) {
+    if (elementos.hasOwnProperty(attr)) {
+      for (let j = 0; j < elementos[attr].length; j++) {
+        elementos[attr][j].click();
+      }
+    }
+  }
+}

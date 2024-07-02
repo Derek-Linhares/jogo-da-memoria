@@ -6,6 +6,8 @@ let musica = document.querySelector("#end");
 const doh = document.getElementById("doh");
 const uhu = document.getElementById("uhu");
 
+let cheatsEnabled = false;
+
 startGame();
 
 function startGame() {
@@ -50,46 +52,46 @@ function createCardFace(face, card, element) {
   element.appendChild(cardElementFace);
 }
 
-createCardsFromInstruments(instruments);
-
 function flipCard() {
-  if (game.setCard(this.id)) {
-    this.classList.add("flip");
-    if (game.secondCard) {
-      if (game.checkMatch()) {
-        playSound(uhu);
-        game.clearCards();
-        if (game.checkGameOver()) {
-          let music = document.querySelector("#bgm");
-          music.pause();
+  if (!cheatsEnabled) {
+    if (game.setCard(this.id)) {
+      this.classList.add("flip");
+      if (game.secondCard) {
+        if (game.checkMatch()) {
+          playSound(uhu);
+          game.clearCards();
+          if (game.checkGameOver()) {
+            let music = document.querySelector("#bgm");
+            music.pause();
 
-          confettiIntervalId = setInterval(() => {
-            confetti({
-              particleCount: 100,
-              angle: 90,
-              spread: 360,
-              startVelocity: 30,
-              origin: { x: Math.random(), y: Math.random() },
-              gravity: 0.5,
-              ticks: 200,
-            });
-          }, 800);
+            confettiIntervalId = setInterval(() => {
+              confetti({
+                particleCount: 100,
+                angle: 90,
+                spread: 360,
+                startVelocity: 30,
+                origin: { x: Math.random(), y: Math.random() },
+                gravity: 0.5,
+                ticks: 200,
+              });
+            }, 800);
 
-          let gameOverLayer = document.getElementById("gameOver");
-          gameOverLayer.style.display = "flex";
-          let musica = document.querySelector("#end");
-          musica.play();
-          playingTheme = false;
+            let gameOverLayer = document.getElementById("gameOver");
+            gameOverLayer.style.display = "flex";
+            let musica = document.querySelector("#end");
+            musica.play();
+            playingTheme = false;
+          }
+        } else {
+          setTimeout(() => {
+            let firstCardView = document.getElementById(game.firstCard.id);
+            let secondCardView = document.getElementById(game.secondCard.id);
+            firstCardView.classList.remove("flip");
+            secondCardView.classList.remove("flip");
+            playSound(doh);
+            game.unflipCards();
+          }, 1000);
         }
-      } else {
-        setTimeout(() => {
-          let firstCardView = document.getElementById(game.firstCard.id);
-          let secondCardView = document.getElementById(game.secondCard.id);
-          firstCardView.classList.remove("flip");
-          secondCardView.classList.remove("flip");
-          playSound(doh);
-          game.unflipCards();
-        }, 1000);
       }
     }
   }
@@ -105,3 +107,26 @@ function restart() {
   musica.currentTime = 0;
   clearInterval(confettiIntervalId);
 }
+
+function openNever() {
+  window.open("https://www.youtube.com/watch?v=UNuogmk7oEA", "_blank");
+}
+
+function openXanural() {
+  window.open("https://www.yout-ube.com/watch?v=9z-Mh9Qeinw", "_blank");
+}
+
+function enableCheats(event) {
+  if (event.key === '"') {
+    let input = prompt("Digite o comando:");
+    if (input === "bagre") {
+      flipAllCards();
+    } else if (input === "never") {
+      openNever();
+    } else if (input === "xanural") {
+      openXanural();
+    }
+  }
+}
+
+document.addEventListener("keypress", enableCheats);
