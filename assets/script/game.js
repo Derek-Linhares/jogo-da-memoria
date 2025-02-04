@@ -108,8 +108,14 @@ let music = document.querySelector("#bgm");
 function playSound(audio) {
   audio.pause();
   audio.currentTime = 0;
+
+  if (audio.src.includes("uhuu.mp3")) {
+    audio.volume = 0.5;
+  } else {
+    audio.volume = 0.3;
+  }
+
   audio.play();
-  audio.volume = 0.3;
 }
 
 function toggleMusic() {

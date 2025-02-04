@@ -3,17 +3,30 @@
 
 <head>
 	<meta charset="UTF-8" />
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Jogo Da Memória</title>
 	<link rel="stylesheet" href="./assets/style/style.css" />
+	<link rel="icon" type="image/png" href="./assets/favIcon.png" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+	<div id="disclaimer">
+		<h2>Legal Disclaimer</h2>
+		<p>This Simpsons memory game is an educational and non-profit project, developed solely for learning purposes
+			and portfolio presentation. All characters, images, and related elements from The Simpsons are the property
+			of 20th Television and The Walt Disney Company. This project is not officially affiliated with these
+			companies and does not intend to infringe on any copyrights.
 
+			If there is any legal request for the removal of this project, it will be taken down immediately.</p>
+
+		<button id="start" onclick="hideDisclaimer()">Start Game</button>
+	</div>
+	<div class="bart"></div>
 	</h1>
 	<div class="container">
 		<div class="header">
@@ -45,6 +58,7 @@
 	<audio src="./assets/_The Simpsons_ Main Title Theme (320).mp3" id="bgm" loop></audio>
 	<audio src="/assets/doh! (sound effect).mp3" id="doh"></audio>
 	<audio src="/assets/uhuu.mp3" id="uhu"></audio>
+	<audio src="./assets/maggie-simpson.mp3" id="flipSound"></audio>
 </body>
 <script src="./assets/script/game.js"></script>
 <script src="./assets/script/script.js"></script>

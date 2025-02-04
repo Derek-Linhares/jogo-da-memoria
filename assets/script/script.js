@@ -5,7 +5,14 @@ const ICON = "icon";
 let musica = document.querySelector("#end");
 const doh = document.getElementById("doh");
 const uhu = document.getElementById("uhu");
-
+const flipSound = document.getElementById("flipSound");
+const disclaimer = document.getElementById("disclaimer");
+const body = document.body;
+function hideDisclaimer() {
+  if (disclaimer) {
+    disclaimer.style.visibility = "hidden";
+  }
+}
 let cheatsEnabled = false;
 
 startGame();
@@ -55,10 +62,13 @@ function createCardFace(face, card, element) {
 function flipCard() {
   if (!cheatsEnabled) {
     if (game.setCard(this.id)) {
+      playSound(flipSound);
       this.classList.add("flip");
       if (game.secondCard) {
         if (game.checkMatch()) {
-          playSound(uhu);
+          setTimeout(() => {
+            playSound(uhu);
+          }, 500);
           game.clearCards();
           if (game.checkGameOver()) {
             let music = document.querySelector("#bgm");

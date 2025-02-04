@@ -10,10 +10,73 @@ html {
 }
 body {
   font-family: "Righteous", sans-serif;
+  background-color: rgb(29, 236, 247);
+  display: flex;
+  cursor: url("../cursor2.png"), auto;
+}
 
-  background-image: url(/assets/background.png);
-  background-position: center;
+#disclaimer {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(29, 236, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3.5rem;
+  color: yellow;
+  position: absolute;
+  text-shadow: 0.1rem 0.2rem 0.2rem rgb(21, 20, 20);
+  visibility: visible;
+  z-index: 1;
+}
+
+#disclaimer p {
+  width: 40%;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+button {
+  decoration: none;
+  background-color: yellow;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.bart {
+  width: 50rem;
+  height: 100rem;
+
+  z-index: 0;
+  background-image: url(../bart.png);
   background-size: cover;
+  backlground-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#start {
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: yellow;
+  border: none;
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  cursor: url("../cursor1.png"), auto;
+  box-shadow: 0.2rem 0.4rem 0.5rem rgb(21, 20, 20);
+  animation: grow 1.5s infinite ease-in;
+}
+
+#start:active {
+  transform: translateY(0.4rem);
 }
 
 .container {
@@ -36,7 +99,7 @@ body {
 
 .card_front {
   transform: rotateY(180deg);
-  background: rgb(91, 188, 253);
+  background: rgb(61, 183, 243);
 }
 img {
   border-radius: 2rem;
@@ -61,12 +124,12 @@ img {
   border-radius: 2rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.45);
   backface-visibility: hidden;
-  cursor: pointer;
+  cursor: url("../cursor1.png"), auto;
   -webkit-user-drag: none;
 }
 
 .card_back {
-  background-color: #19d2f3;
+  background-color: rgb(55, 178, 255);
   background-position: center;
 }
 .header {
@@ -89,11 +152,10 @@ img {
 }
 
 .play {
-  justify-content: end;
   width: 3rem;
   height: 3rem;
   font-size: 6rem;
-  cursor: pointer;
+  cursor: url("../cursor1.png"), auto;
   margin-left: 8rem;
   margin-top: 2rem;
   animation: grow 1s infinite ease-in-out;
@@ -152,7 +214,7 @@ img {
   border: none;
   border-radius: 1.5rem;
   margin-top: 2rem;
-  cursor: pointer;
+  cursor: url("../cursor1.png"), auto;
   box-shadow: 0.2rem 0.4rem 0.5rem rgb(21, 20, 20);
   animation: grow 1.5s infinite ease-in;
 }
@@ -183,7 +245,7 @@ h1 {
 
 @media (max-height: 1080px) {
   html {
-    font-size: 8.5px;
+    font-size: 9px;
   }
   .container {
     margin-top: -5rem;
@@ -212,6 +274,10 @@ h1 {
   html {
     font-size: 6px;
   }
+  #disclaimer p {
+    width: 80%;
+  }
+
   #flaming {
     width: 65rem;
     height: 65rem;
@@ -222,5 +288,8 @@ h1 {
     overflow-x: hidden;
     touch-action: none;
     margin-top: 7rem;
+  }
+  .bart {
+    display: none;
   }
 }
