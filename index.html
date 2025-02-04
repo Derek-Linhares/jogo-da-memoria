@@ -45,17 +45,23 @@
 
 	<div id="gameOver">
 
-		<div>Congratulations! You've mastered the memory game! Enjoy a Flaming Moe on us!
-
+		<div>
+			<video src="./assets/simpsons.mp4" id="simpsons"></video>
 		</div>
-		<div id="flaming"></div>
-		<button id="restart" onclick="restart()">
-			Play Again
-		</button>
+		<div id="final">
+			<div id="finalText">Congratulations! <br> You've mastered the memory game! <br> Enjoy a Flaming Moe on us!
+
+			</div>
+			<div id="flaming"></div>
+			<button id="restart" onclick="restart()">
+				Play Again
+			</button>
+		</div>
+
 	</div>
 
 	<audio src="./assets//flaming.mp3" id="end" loop></audio>
-	<audio src="./assets/_The Simpsons_ Main Title Theme (320).mp3" id="bgm" loop></audio>
+	<audio src="./assets/music.mp3" id="bgm" loop></audio>
 	<audio src="/assets/doh! (sound effect).mp3" id="doh"></audio>
 	<audio src="/assets/uhuu.mp3" id="uhu"></audio>
 	<audio src="./assets/maggie-simpson.mp3" id="flipSound"></audio>

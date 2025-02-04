@@ -104,15 +104,18 @@ let game = {
 };
 
 let music = document.querySelector("#bgm");
-
+music.volume = 0.1;
 function playSound(audio) {
   audio.pause();
   audio.currentTime = 0;
 
   if (audio.src.includes("uhuu.mp3")) {
     audio.volume = 0.5;
+  }
+  if (audio.src.includes("music.mp3")) {
+    audio.volume = 0.15;
   } else {
-    audio.volume = 0.3;
+    audio.volume = 0.2;
   }
 
   audio.play();
@@ -122,10 +125,12 @@ function toggleMusic() {
   if (playingTheme) {
     music.pause();
     music.currentTime = 0;
+
     playingTheme = false;
   } else {
     let musicNote = document.getElementById("play");
     musicNote.classList.add("stop-animation");
+
     playSound(music);
     playingTheme = true;
   }

@@ -8,10 +8,21 @@ const uhu = document.getElementById("uhu");
 const flipSound = document.getElementById("flipSound");
 const disclaimer = document.getElementById("disclaimer");
 const body = document.body;
+const simpsons = document.getElementById("simpsons");
+simpsons.loop = true;
+musica.volume = 0.3;
 function hideDisclaimer() {
   if (disclaimer) {
     disclaimer.style.visibility = "hidden";
   }
+}
+
+function restartVideo() {
+  if (!simpsons.paused) {
+    simpsons.pause();
+    simpsons.currentTime = 0;
+  }
+  simpsons.play();
 }
 let cheatsEnabled = false;
 
@@ -90,6 +101,8 @@ function flipCard() {
             gameOverLayer.style.display = "flex";
             let musica = document.querySelector("#end");
             musica.play();
+            restartVideo();
+
             playingTheme = false;
           }
         } else {
