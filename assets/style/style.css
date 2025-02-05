@@ -49,12 +49,12 @@ button {
   margin-top: 4rem;
 }
 
-.bart {
+#bart {
   width: 50rem;
   height: 100rem;
 
   z-index: 0;
-  background-image: url(../bart.png);
+  background-image: url(../0.png);
   background-size: cover;
   backlground-repeat: no-repeat;
   background-position: center;

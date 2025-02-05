@@ -47,46 +47,46 @@ let game = {
     return this.cards.filter((card) => !card.flipped).length == 0;
   },
 
-  instruments: [
-    "trompete",
-    "tuba",
-    "acordeon",
-    "clarinete",
-    "trombone",
-    "tenor",
-    "alto",
-    "souza",
+  character: [
+    "homer",
+    "grampa",
+    "maggie",
+    "krusty",
+    "burns",
+    "marge",
+    "wiggun",
+    "duff",
   ],
 
   cards: null,
 
-  createCardsFromInstruments: function () {
+  createCardsFromCharacters: function () {
     this.cards = [];
-    this.instruments.forEach((instrument) => {
-      this.cards.push(this.createPairFromInstrument(instrument));
+    this.character.forEach((character) => {
+      this.cards.push(this.createPairFromCharacter(character));
     });
     this.cards = this.cards.flatMap((pair) => pair);
     this.shuffleCards();
     return this.cards;
   },
 
-  createPairFromInstrument: function (instrument) {
+  createPairFromCharacter: function (character) {
     return [
       {
-        id: this.createIdWithInstrument(instrument),
-        icon: instrument,
+        id: this.createIdWithCharacter(character),
+        icon: character,
         flipped: false,
       },
 
       {
-        id: this.createIdWithInstrument(instrument),
-        icon: instrument,
+        id: this.createIdWithCharacter(character),
+        icon: character,
         flipped: false,
       },
     ];
   },
-  createIdWithInstrument: function (instrument) {
-    return instrument + parseInt(Math.random() * 1000);
+  createIdWithCharacter: function (character) {
+    return character + parseInt(Math.random() * 1000);
   },
   shuffleCards: function (cards) {
     let currentIndex = this.cards.length;

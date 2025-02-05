@@ -8,11 +8,44 @@ const uhu = document.getElementById("uhu");
 const flipSound = document.getElementById("flipSound");
 const disclaimer = document.getElementById("disclaimer");
 const body = document.body;
+let bart = document.getElementById("bart");
 
 musica.volume = 0.3;
 function hideDisclaimer() {
   if (disclaimer) {
+    changeBackground();
+    playSound(flipSound);
     disclaimer.style.visibility = "hidden";
+  }
+}
+
+function changeBackground() {
+  let possibilities = [
+    "url('/assets/0.png')",
+    "url('/assets/1.png')",
+    "url('assets/2.png')",
+    "url('/assets/3.png')",
+    "url('/assets/4.png')",
+    "url('/assets/5.png')",
+  ];
+  let lastIndex = -1;
+  let random;
+
+  do {
+    random = Math.floor(Math.random() * possibilities.length);
+  } while (random === lastIndex);
+
+  lastIndex = random;
+
+  bart.style.backgroundImage = possibilities[random];
+  console.log(random);
+  console.log(random);
+  if (random == 4) {
+    bart.style.transform = "scaleX(-1)";
+  }
+  if (random == 0) {
+    bart.style.width = "30";
+    bart.style.height = "60";
   }
 }
 
@@ -21,7 +54,7 @@ let cheatsEnabled = false;
 startGame();
 
 function startGame() {
-  initializaCards(game.createCardsFromInstruments());
+  initializaCards(game.createCardsFromCharacters());
 }
 
 function initializaCards(cards) {
@@ -113,6 +146,8 @@ function flipCard() {
 }
 
 function restart() {
+  playSound(flipSound);
+  changeBackground();
   game.clearCards();
   startGame();
   let gameOverLayer = document.getElementById("gameOver");
