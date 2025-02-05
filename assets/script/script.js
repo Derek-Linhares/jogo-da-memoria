@@ -8,8 +8,7 @@ const uhu = document.getElementById("uhu");
 const flipSound = document.getElementById("flipSound");
 const disclaimer = document.getElementById("disclaimer");
 const body = document.body;
-const simpsons = document.getElementById("simpsons");
-simpsons.loop = true;
+
 musica.volume = 0.3;
 function hideDisclaimer() {
   if (disclaimer) {
@@ -17,13 +16,6 @@ function hideDisclaimer() {
   }
 }
 
-function restartVideo() {
-  if (!simpsons.paused) {
-    simpsons.pause();
-    simpsons.currentTime = 0;
-  }
-  simpsons.play();
-}
 let cheatsEnabled = false;
 
 startGame();
