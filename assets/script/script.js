@@ -130,7 +130,6 @@ function flipCard() {
             gameOverLayer.style.display = "flex";
             let musica = document.querySelector("#end");
             musica.play();
-            restartVideo();
 
             playingTheme = false;
           }
