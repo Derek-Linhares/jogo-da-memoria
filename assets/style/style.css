@@ -321,7 +321,7 @@ h1 {
     touch-action: none;
     margin-top: 7rem;
   }
-  .bart {
+  #bart {
     display: none;
   }
 }
