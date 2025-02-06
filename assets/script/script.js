@@ -27,6 +27,14 @@ function changeBackground() {
     "url('/assets/3.png')",
     "url('/assets/4.png')",
     "url('/assets/5.png')",
+    "url('/assets/6.png')",
+    "url('/assets/7.png')",
+    "url('/assets/8.png')",
+    "url('/assets/9.png')",
+    "url('/assets/10.png')",
+    "url('/assets/11.png')",
+    "url('/assets/12.png')",
+    "url('/assets/13.png')",
   ];
   let lastIndex = -1;
   let random;
@@ -40,12 +48,8 @@ function changeBackground() {
   bart.style.backgroundImage = possibilities[random];
   console.log(random);
   console.log(random);
-  if (random == 4) {
+  if (random == 3 || random == 9) {
     bart.style.transform = "scaleX(-1)";
-  }
-  if (random == 0) {
-    bart.style.width = "30";
-    bart.style.height = "60";
   }
 }
 
