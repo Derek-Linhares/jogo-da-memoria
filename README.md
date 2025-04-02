@@ -1,6 +1,6 @@
 # 🟡 Simpsons Memory Game
 
-![Simpsons Memory](https://github.com/Derek-Linhares/jogo-da-memoria/blob/main/Captura%20de%20tela%202025-04-02%20082507.png)
+![Simpsons Memory](https://github.com/Derek-Linhares/jogo-da-memoria/blob/main/Captura%20de%20tela%202025-04-02%20082927.png)
 
 ## 📜 Sobre o Projeto
 O **Simpsons Memory Game** é um jogo da memória temático baseado na família mais famosa de Springfield! Teste sua memória e divirta-se encontrando os pares dos personagens icônicos dos Simpsons.
@@ -23,7 +23,7 @@ O **Simpsons Memory Game** é um jogo da memória temático baseado na família 
 3. Complete o jogo com o menor número de jogadas possível!
 
 ## 📷 Capturas de Tela
-![Screenshot](https://your-image-url.com)
+![Screenshot](https://github.com/Derek-Linhares/jogo-da-memoria/blob/main/Captura%20de%20tela%202025-04-02%20082744.png)
 
 ## 📦 Como Executar Localmente
 ```bash
