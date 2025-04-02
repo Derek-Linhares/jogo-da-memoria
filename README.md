@@ -1,24 +1,42 @@
-Veja este projeto em ação no link: https://jogo-da-memoria-flame.vercel.app/
+# 🟡 Simpsons Memory Game
 
-# The Simpsons Memory Game
+![Simpsons Memory](https://your-image-url.com)
 
-## Sobre o Projeto
-"The Simpsons Memory Game" é um jogo de memória divertido e interativo baseado na famosa série de TV, Os Simpsons. O objetivo do jogo é encontrar todos os pares de cartas correspondentes no menor tempo possível. Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript.
+## 📜 Sobre o Projeto
+O **Simpsons Memory Game** é um jogo da memória temático baseado na família mais famosa de Springfield! Teste sua memória e divirta-se encontrando os pares dos personagens icônicos dos Simpsons.
 
-## Funcionalidades
-<li>Interface Responsiva: 
-O jogo é completamente responsivo e pode ser jogado em dispositivos móveis e desktops.
-<li>Animações Suaves: Transições e animações para virar as cartas e exibir correspondências.
-<li>Sistema de Pontuação: Conta o número de movimentos e o tempo gasto para concluir o jogo.
-<li>Reiniciar Jogo: Opção para reiniciar o jogo a qualquer momento.
-<li>Temática dos Simpsons: Imagens e sons autênticos dos Simpsons para uma experiência imersiva.
-  
-## Tecnologias Utilizadas
-<li>HTML5: Estrutura do jogo.
-<li>CSS3: Estilização e layout.
-<li>JavaScript: Lógica do jogo e interatividade.
+## 🚀 Funcionalidades
+✅ Jogo da memória clássico com personagens dos Simpsons.  
+✅ Animações suaves ao virar as cartas.  
+✅ Sistema de contagem de jogadas.  
+✅ Reinício do jogo a qualquer momento.  
+✅ Layout responsivo para diferentes dispositivos.  
 
+## 🛠️ Tecnologias Utilizadas
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) **HTML5** - Estrutura da aplicação
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) **CSS3** - Estilização e responsividade
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) **JavaScript** - Lógica do jogo
 
+## 🎮 Como Jogar
+1. Clique em uma carta para virá-la.
+2. Encontre o par correspondente.
+3. Complete o jogo com o menor número de jogadas possível!
 
-## Contribuições
-<li>Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request. Para grandes mudanças, abra uma issue primeiro para discutir o que você gostaria de mudar.
+## 📷 Capturas de Tela
+![Screenshot](https://your-image-url.com)
+
+## 📦 Como Executar Localmente
+```bash
+git clone https://github.com/seu-usuario/simpsons-memory.git
+cd simpsons-memory
+open index.html
+```
+
+## 👨‍💻 Autor
+- **Seu Nome** - [LinkedIn](https://www.linkedin.com/in/seu-perfil) | [GitHub](https://github.com/seu-usuario)
+
+## 📜 Licença
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+🟡 Boa sorte e divirta-se com o Simpsons Memory Game! 🟠
+
