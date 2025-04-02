@@ -1,3 +1,5 @@
+
+
 # 🟡 Simpsons Memory Game
 
 ![Simpsons Memory](https://github.com/Derek-Linhares/jogo-da-memoria/blob/main/Captura%20de%20tela%202025-04-02%20082927.png)
@@ -32,11 +34,12 @@ cd simpsons-memory
 open index.html
 ```
 
-## 👨‍💻 Autor
-- **Seu Nome** - [LinkedIn](https://www.linkedin.com/in/seu-perfil) | [GitHub](https://github.com/seu-usuario)
+
 
 ## 📜 Licença
 Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+🔗 **Veja o projeto online:** https://jogo-da-memoria-flame.vercel.app/
 
 🟡 Boa sorte e divirta-se com o Simpsons Memory Game! 🟠
 
